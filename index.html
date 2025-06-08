@@ -11,12 +11,12 @@
             margin: 0;
             padding: 0;
             position: relative;
-            background: url('./terra..gif') no-repeat center center fixed; /* Caminho para sua imagem */
+            background: url('./terra..gif') no-repeat center center fixed;
             background-size: cover;
         }
 
         .overlay {
-            background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com opacidade */
+            background-color: rgba(255, 255, 255, 0.8);
             position: absolute;
             top: 0;
             left: 0;
@@ -65,6 +65,23 @@
         nav ul li a:hover {
             text-decoration: underline;
             color: aqua;
+        }
+
+        /* Botão personalizado */
+        .salmo-button {
+            background-color: #0077cc;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .salmo-button:hover {
+            background-color: #005fa3;
+            color: #ffffff;
         }
 
         main {
@@ -121,7 +138,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            display: none; /* Escondido por padrão */
+            display: none;
             z-index: 3;
         }
 
@@ -135,9 +152,11 @@
                 max-width: none;
                 margin: 0.5rem 0;
             }
+
             nav ul {
                 flex-direction: column;
             }
+
             nav ul li {
                 margin: 0.5rem 0;
             }
@@ -148,12 +167,18 @@
     <header>
         <h1>Louvando ao Senhor Jesus</h1>
     </header>
+
     <nav>
         <ul>
             <li><a href="#home">Início</a></li>
-            <li><a href="https://adrianoalves87.github.io/salmos-de-davi/">salmo narrado pro cid moreira</a></li>
+            <li>
+                <a href="https://adrianoalves87.github.io/salmos-de-davi/" class="salmo-button" target="_blank">
+                    🎧PARA OUVIR Salmo Narrado por Cid Moreira CLIK-AQUI
+                </a>
+            </li>
         </ul>
     </nav>
+
     <main>
         <section id="home" class="video-gallery">
             <article class="video">
@@ -181,7 +206,7 @@
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
         </section>
-        
+
         <section id="adoracao" class="video-gallery">
             <article class="video">
                 <video width="320" height="240" controls>
@@ -208,7 +233,7 @@
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
         </section>
-        
+
         <section id="louvor" class="video-gallery">
             <article class="video">
                 <video width="320" height="240" controls>
@@ -236,7 +261,9 @@
             </article>
         </section>
     </main>
+
     <button class="top-button" onclick="scrollToTop()">Voltar para o Topo</button>
+
     <script>
         function likeVideo(button) {
             var likeCount = button.querySelector('.like-count');
